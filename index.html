@@ -62,9 +62,11 @@
             <h3 class="primary text-2xl font-bold">Search your phone</h3>
 
             <div class="input-field ">
-                <input id="searchValue" class="bg-[#100f0f] bg-opacity-5 text-sm  py-2 px-3 w-96   my-5 rounded-md" type="text"
-                    placeholder="  Search your phone">
-                <button onclick="handlePhone()" class="bg-color text-white text-sm font-semibold px-4 py-2 rounded">Search</button>
+                <input id="searchValue" class="bg-[#100f0f] bg-opacity-5 text-sm  py-2 px-3 w-96   my-5 rounded-md"
+                    type="text" placeholder="  Search your phone">
+                <button onclick="handlePhone()"
+                    class="bg-color text-white text-sm font-semibold px-4 py-2 rounded">Search</button>
+
 
             </div>
         </section>
@@ -73,23 +75,32 @@
         <section class="mb-14">
 
             <div id="display " class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
-                <div class="card text-center p-4 border border-[#CFCFCF] border-solid rounded-lg">
-
-                    <figure class="bg-[#0d6efd] bg-opacity-5 py-6 mx-2 rounded-lg">
-                        <img src="./images/pngwing 3.png" alt="">
-                    </figure>
-                     <h3 class="text-xl font-bold text-[#403F3F] my-3 ">Iphone 13 Pro Max</h3>
-                     <p class="secondary text-sm mb-3 mx-4">There are many variations of passages of available, but the majority have suffered</p>
-                     <h4 class="text-base font-bold text-[#403F3F] ">$999</h4>
-                     <button class="my-3 bg-color text-white text-sm font-semibold w-32 py-2 rounded mx-auto">Show Details</button>
-
-
-
-                </div>
-  
-
+                
 
             </div>
+           
+            <!-- Open the modal using ID.showModal() method -->
+
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
+                <form method="dialog" class="modal-box">
+                  
+
+                    <div id="modal-details" class="text-center">
+                       
+
+
+                </form>
+            </dialog>
+
+
+
+            
+
+
+
+
+
+            
         </section>
 
 
@@ -108,57 +119,57 @@
                     <p class="secondary text-sm mt-3">You can definitely work.</p>
                 </div>
                 <div class="flex justify-around items-center gap-4">
-                   <div class="text-xl ">
-                    <i class="fa-brands fa-facebook-f cursor-pointer " style="color: #1669f8;"></i>
-                    <i class="fa-brands fa-twitter mx-2 cursor-pointer" style="color: #075ced;"></i>
-                    <i class="fa-brands fa-square-instagram cursor-pointer" style="color: #f863b2;"></i>
-                   </div>
-                   <button class="bg-color text-white text-sm font-semibold px-4 py-2 rounded">Join Premium</button>
+                    <div class="text-xl ">
+                        <i class="fa-brands fa-facebook-f cursor-pointer " style="color: #1669f8;"></i>
+                        <i class="fa-brands fa-twitter mx-2 cursor-pointer" style="color: #075ced;"></i>
+                        <i class="fa-brands fa-square-instagram cursor-pointer" style="color: #f863b2;"></i>
+                    </div>
+                    <button class="bg-color text-white text-sm font-semibold px-4 py-2 rounded">Join Premium</button>
                 </div>
             </div>
             <hr>
-            
-                <div class="flex justify-between text-base-content my-8">
-                     
-                    <div class="grid grid-rows-5 gap-1">
-                     
-                      <a class="link link-hover">Product</a> 
-                      <a class="link link-hover">Browse jobs</a> 
-                      <a class="link link-hover">Remote jobs </a> 
-                      <a class="link link-hover">Startup jobs</a>
-                      <a class="link link-hover">Company jobs</a>
-                    </div> 
-                    <div class="grid grid-rows-5 gap-1">
-                     
-                      <a class="link link-hover">Popular</a> 
-                      <a class="link link-hover">UIUX Design</a> 
-                      <a class="link link-hover">Product Design </a> 
-                      <a class="link link-hover">Front-End Developer</a>
-                      <a class="link link-hover">Back-End Developer</a>
-                    </div> 
-                    <div class="grid grid-rows-5 gap-1">
-                     
-                      <a class="link link-hover">Resource</a> 
-                      <a class="link link-hover">Faq</a> 
-                      <a class="link link-hover">Support</a>
-                      <a class="link link-hover">Policy </a>
-                      <a class="link link-hover">Terms of Service</a>
-                    </div>
-                    <div class="grid grid-rows-5 gap-1">
-                      
-                      <a class="link link-hover">Company </a> 
-                      <a class="link link-hover">About Us</a> 
-                      <a class="link link-hover">Contact Us</a>
-                      <a class="link link-hover">Career Tips</a>
-                      <a class="link link-hover">Careers</a>
-                    </div>
-                  </footer>
 
-           
+            <div class="flex justify-between text-base-content my-8">
+
+                <div class="grid grid-rows-5 gap-1">
+
+                    <a class="link link-hover">Product</a>
+                    <a class="link link-hover">Browse jobs</a>
+                    <a class="link link-hover">Remote jobs </a>
+                    <a class="link link-hover">Startup jobs</a>
+                    <a class="link link-hover">Company jobs</a>
+                </div>
+                <div class="grid grid-rows-5 gap-1">
+
+                    <a class="link link-hover">Popular</a>
+                    <a class="link link-hover">UIUX Design</a>
+                    <a class="link link-hover">Product Design </a>
+                    <a class="link link-hover">Front-End Developer</a>
+                    <a class="link link-hover">Back-End Developer</a>
+                </div>
+                <div class="grid grid-rows-5 gap-1">
+
+                    <a class="link link-hover">Resource</a>
+                    <a class="link link-hover">Faq</a>
+                    <a class="link link-hover">Support</a>
+                    <a class="link link-hover">Policy </a>
+                    <a class="link link-hover">Terms of Service</a>
+                </div>
+                <div class="grid grid-rows-5 gap-1">
+
+                    <a class="link link-hover">Company </a>
+                    <a class="link link-hover">About Us</a>
+                    <a class="link link-hover">Contact Us</a>
+                    <a class="link link-hover">Career Tips</a>
+                    <a class="link link-hover">Careers</a>
+                </div>
+    </footer>
 
 
 
-        </div>
+
+
+    </div>
     </footer>
     <script src="./js/index.js"></script>
 </body>
