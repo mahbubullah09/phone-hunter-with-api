@@ -1,11 +1,13 @@
 const loadPhone = async (ID) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${ID}`);
     const data = await res.json();
+
     const phone = data.data;
     diaplayPhones(phone);
 }
 
 const diaplayPhones = phones => {
+
 
     const newDiv = document.getElementById('display ');
     newDiv.innerHTML='';
@@ -13,8 +15,10 @@ const diaplayPhones = phones => {
     phones.forEach(phone => {
 
         const phoneCard = document.createElement('div');
+
         phoneCard.innerHTML = `
         <div class="card text-center p-4 border border-[#CFCFCF] border-solid rounded-lg">
+
 
         <figure class="bg-[#0d6efd] bg-opacity-5 py-6 mx-2 rounded-lg">
             <img  src=${phone.image}>
@@ -28,7 +32,10 @@ const diaplayPhones = phones => {
 
     </div>
         `;
+
+
         newDiv.appendChild(phoneCard);
+
 
 
     });
@@ -36,20 +43,30 @@ const diaplayPhones = phones => {
 }
 
 
+
 const handlePhone = () => {
+
+
     console.log('object');
 
     const searchId = document.getElementById('searchValue');
+
     const searchValue = searchId.value;
     console.log(searchValue);
+
     searchId.value = '';
+
     loadPhone(searchValue);
+
 
 }
 
 
 const handleDetails = async (PD) => {
+
     console.log(PD);
+
+
 
     const phonDetails = await fetch(`https://openapi.programming-hero.com/api/phone/${PD}`);
     const modal = await phonDetails.json();
@@ -57,9 +74,16 @@ const handleDetails = async (PD) => {
     console.log(modalDetails.name);
 
     const modalId = document.getElementById('modal-details');
+
     modalId.innerHTML = '';
+
+
 console.log(modalId);
+
+
     const newModal = document.createElement('div');
+
+
 
     newModal.innerHTML = `
     <figure class="bg-[#0d6efd] bg-opacity-5 py-6 mx-2 rounded-lg">
@@ -105,9 +129,12 @@ console.log(modalId);
     
            `
 
+
+
     modalId.appendChild(newModal);
 
 
+    
     my_modal_5.showModal();
 }
 
