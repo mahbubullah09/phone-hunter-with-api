@@ -1,12 +1,13 @@
-const loadPhone = async (ID) => {
+const loadPhone = async (ID, isShowAll) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${ID}`);
     const data = await res.json();
+    console.log('object');
 
     const phone = data.data;
-    diaplayPhones(phone);
+    diaplayPhones(phone, isShowAll);
 }
 
-const diaplayPhones = phones => {
+const diaplayPhones = (phones, isShowAll) => {
     const dataID = document.getElementById('no-data');
     const newDiv = document.getElementById('display ');
     newDiv.innerHTML = '';
@@ -24,17 +25,24 @@ const diaplayPhones = phones => {
        
     else {
         const showhAllId= document.getElementById('btn-showAll');
-        if(phones.length<12){
+        if(phones.length>12  && !isShowAll ){
 
-            showhAllId.classList.add('hidden');
+            showhAllId.classList.remove('hidden');
+
+           
 
         }
         else{
-            showhAllId.classList.remove('hidden');
+            showhAllId.classList.add('hidden');
         }
 
-
+      if(!isShowAll){
         phones = phones.slice(0,12);
+
+      }
+
+
+       
 
         phones.forEach(phone => {
             const phoneCard = document.createElement('div');
@@ -66,7 +74,7 @@ const diaplayPhones = phones => {
 
 
 
-const handlePhone = () => {
+const handlePhone = (isShowAll) => {
     handlSpinner(true);
 
 
@@ -78,12 +86,20 @@ const handlePhone = () => {
     const searchValue = searchId.value;
     console.log(searchValue);
 
-    searchId.value = '';
+    // searchId.value = '';
 
-    loadPhone(searchValue);
+    loadPhone(searchValue, isShowAll);
 
 
 }
+
+const showAllHandle= () =>{
+
+    handlePhone(true);
+
+
+}
+
 
 
 const handleDetails = async (PD) => {
@@ -181,6 +197,13 @@ const handlSpinner = (isLoading) => {
 
 }
 
-loadPhone('a');
+
+
+// show all handle 
+
+
+
+
+loadPhone('apple', true);
 
 
