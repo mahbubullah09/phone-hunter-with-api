@@ -50,8 +50,9 @@
             <h3 class="primary text-2xl font-bold">Search your phone</h3>
 
             <div class="input-field ">
-                <input id="searchValue" class="bg-[#100f0f] bg-opacity-5 text-sm  py-2 px-3 w-72 md:w-96   my-5 rounded-md"
-                    type="text" placeholder="  Search your phone">
+                <input id="searchValue"
+                    class="bg-[#100f0f] bg-opacity-5 text-sm  py-2 px-3 w-72 md:w-96   my-5 rounded-md" type="text"
+                    placeholder="  Search your phone">
                 <button onclick="handlePhone()"
                     class="bg-color text-white text-sm font-semibold px-4 py-2 rounded">Search</button>
             </div>
@@ -63,17 +64,20 @@
 
             <span class="loading loading-bars loading-lg"></span>
         </div>
-        
+
         <div id="no-data" class="hidden  my-16">
             <h3 class="text-4xl font-extrabold text-black text-center"> 'No Data Found' </h3>
 
 
-            
+
         </div>
 
 
         <section class="mb-14">
             <div id="display " class="grid grid-cols-1 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:px-0 gap-4 py-8">
+            </div>
+            <div class="text-center ">
+                <button id="btn-showAll" class="bg-color hidden text-white text-sm font-semibold px-4 py-2 rounded mt-4 ">Show All</button>
             </div>
             <!-- Open the modal using ID.showModal() method -->
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
@@ -100,7 +104,8 @@
                 </div>
             </div>
             <hr>
-            <div class="grid grid-cols-2 gap-10 pl-6 md:gap-0 md:pl-0    md:flex md:justify-between text-base-content my-8">
+            <div
+                class="grid grid-cols-2 gap-10 pl-6 md:gap-0 md:pl-0    md:flex md:justify-between text-base-content my-8">
                 <div class="grid grid-rows-5 gap-1">
                     <a class="link link-hover">Product</a>
                     <a class="link link-hover">Browse jobs</a>
@@ -117,7 +122,7 @@
                 </div>
 
 
-               
+
 
 
 
@@ -129,7 +134,7 @@
                     <a class="link link-hover">Terms of Service</a>
                 </div>
 
-                
+
                 <div class="grid grid-rows-5 gap-1">
                     <a class="link link-hover">Company </a>
                     <a class="link link-hover">About Us</a>
@@ -142,4 +147,5 @@
     </footer>
     <script src="./js/index.js"></script>
 </body>
+
 </html>

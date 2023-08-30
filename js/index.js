@@ -11,6 +11,11 @@ const diaplayPhones = phones => {
     const newDiv = document.getElementById('display ');
     newDiv.innerHTML = '';
 
+
+  
+
+
+
     if (phones.length === 0) {
         dataID.classList.remove('hidden')   ;  
         handlSpinner(false);   
@@ -18,6 +23,18 @@ const diaplayPhones = phones => {
 
        
     else {
+        const showhAllId= document.getElementById('btn-showAll');
+        if(phones.length<12){
+
+            showhAllId.classList.add('hidden');
+
+        }
+        else{
+            showhAllId.classList.remove('hidden');
+        }
+
+
+        phones = phones.slice(0,12);
 
         phones.forEach(phone => {
             const phoneCard = document.createElement('div');
