@@ -9,8 +9,11 @@ const loadPhone = async (ID) => {
 const diaplayPhones = phones => {
     const newDiv = document.getElementById('display ');
     newDiv.innerHTML='';
+
+
+
     phones.forEach(phone => {
-        const phoneCard = document.createElement('div');
+    const phoneCard = document.createElement('div');
 
         phoneCard.innerHTML = `
         <div class="card text-center p-4 border border-[#CFCFCF] border-solid rounded-lg">
@@ -29,15 +32,18 @@ const diaplayPhones = phones => {
         newDiv.appendChild(phoneCard);
 
     });
+    handlSpinner(false);
 
 }
 
 
 
 const handlePhone = () => {
+    handlSpinner(true);
 
 
-    console.log('object');
+
+  
 
     const searchId = document.getElementById('searchValue');
 
@@ -54,6 +60,7 @@ const handlePhone = () => {
 
 const handleDetails = async (PD) => {
 
+  
   
 
 
@@ -126,6 +133,24 @@ const handleDetails = async (PD) => {
 
 
     my_modal_5.showModal();
+}
+
+
+const handlSpinner= (isLoading)=>{
+   
+    const spinnerId= document.getElementById('spin');
+
+
+     if(isLoading === true){
+        spinnerId.classList.remove('hidden');
+
+     }
+     else{
+        spinnerId.classList.add('hidden');
+
+     }
+
+
 }
 
 loadPhone('a');
