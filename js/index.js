@@ -7,19 +7,13 @@ const loadPhone = async (ID) => {
 }
 
 const diaplayPhones = phones => {
-
-
     const newDiv = document.getElementById('display ');
     newDiv.innerHTML='';
-
     phones.forEach(phone => {
-
         const phoneCard = document.createElement('div');
 
         phoneCard.innerHTML = `
         <div class="card text-center p-4 border border-[#CFCFCF] border-solid rounded-lg">
-
-
         <figure class="bg-[#0d6efd] bg-opacity-5 py-6 mx-2 rounded-lg">
             <img  src=${phone.image}>
         </figure>
@@ -32,11 +26,7 @@ const diaplayPhones = phones => {
 
     </div>
         `;
-
-
         newDiv.appendChild(phoneCard);
-
-
 
     });
 
@@ -64,7 +54,7 @@ const handlePhone = () => {
 
 const handleDetails = async (PD) => {
 
-    console.log(PD);
+  
 
 
 
@@ -78,7 +68,7 @@ const handleDetails = async (PD) => {
     modalId.innerHTML = '';
 
 
-console.log(modalId);
+
 
 
     const newModal = document.createElement('div');
@@ -134,7 +124,7 @@ console.log(modalId);
     modalId.appendChild(newModal);
 
 
-    
+
     my_modal_5.showModal();
 }
 

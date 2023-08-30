@@ -50,7 +50,7 @@
             <h3 class="primary text-2xl font-bold">Search your phone</h3>
 
             <div class="input-field ">
-                <input id="searchValue" class="bg-[#100f0f] bg-opacity-5 text-sm  py-2 px-3 w-96   my-5 rounded-md"
+                <input id="searchValue" class="bg-[#100f0f] bg-opacity-5 text-sm  py-2 px-3 w-72 md:w-96   my-5 rounded-md"
                     type="text" placeholder="  Search your phone">
                 <button onclick="handlePhone()"
                     class="bg-color text-white text-sm font-semibold px-4 py-2 rounded">Search</button>
@@ -59,7 +59,7 @@
 
 
         <section class="mb-14">
-            <div id="display " class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
+            <div id="display " class="grid grid-cols-1 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:px-0 gap-4 py-8">
             </div>
             <!-- Open the modal using ID.showModal() method -->
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
@@ -70,13 +70,13 @@
         </section>
     </main>
     <footer class="bg-[#0d6efd] bg-opacity-5">
-        <div class=" max-w-4xl mx-auto py-12">
-            <div class="flex justify-between items-center py-8">
+        <div class=" max-w-2xl lg:max-w-4xl mx-auto py-12">
+            <div class="flex flex-col text-center md:flex-row md:text-left justify-between items-center py-8">
                 <div>
                     <h4 class="primary font-bold text-3xl">Hot Gadgets</h4>
                     <p class="secondary text-sm mt-3">You can definitely work.</p>
                 </div>
-                <div class="flex justify-around items-center gap-4">
+                <div class="flex justify-around items-center gap-4 mt-4 md:mt-0">
                     <div class="text-xl ">
                         <i class="fa-brands fa-facebook-f cursor-pointer " style="color: #1669f8;"></i>
                         <i class="fa-brands fa-twitter mx-2 cursor-pointer" style="color: #075ced;"></i>
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <hr>
-            <div class="flex justify-between text-base-content my-8">
+            <div class="grid grid-cols-2 gap-10 pl-6 md:gap-0 md:pl-0    md:flex md:justify-between text-base-content my-8">
                 <div class="grid grid-rows-5 gap-1">
                     <a class="link link-hover">Product</a>
                     <a class="link link-hover">Browse jobs</a>
@@ -101,6 +101,12 @@
                     <a class="link link-hover">Front-End Developer</a>
                     <a class="link link-hover">Back-End Developer</a>
                 </div>
+
+
+               
+
+
+
                 <div class="grid grid-rows-5 gap-1">
                     <a class="link link-hover">Resource</a>
                     <a class="link link-hover">Faq</a>
@@ -108,6 +114,8 @@
                     <a class="link link-hover">Policy </a>
                     <a class="link link-hover">Terms of Service</a>
                 </div>
+
+                
                 <div class="grid grid-rows-5 gap-1">
                     <a class="link link-hover">Company </a>
                     <a class="link link-hover">About Us</a>
