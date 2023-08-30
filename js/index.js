@@ -7,19 +7,26 @@ const loadPhone = async (ID) => {
 }
 
 const diaplayPhones = phones => {
+    const dataID = document.getElementById('no-data');
     const newDiv = document.getElementById('display ');
-    newDiv.innerHTML='';
+    newDiv.innerHTML = '';
 
+    if (phones.length === 0) {
+        dataID.classList.remove('hidden')   ;  
+        handlSpinner(false);   
+    }
 
+       
+    else {
 
-    phones.forEach(phone => {
-    const phoneCard = document.createElement('div');
+        phones.forEach(phone => {
+            const phoneCard = document.createElement('div');
 
-        phoneCard.innerHTML = `
-        <div class="card text-center p-4 border border-[#CFCFCF] border-solid rounded-lg">
-        <figure class="bg-[#0d6efd] bg-opacity-5 py-6 mx-2 rounded-lg">
+            phoneCard.innerHTML = `
+         <div class="card text-center p-4 border border-[#CFCFCF] border-solid rounded-lg">
+         <figure class="bg-[#0d6efd] bg-opacity-5 py-6 mx-2 rounded-lg">
             <img  src=${phone.image}>
-        </figure>
+         </figure>
          <h3 class="text-xl font-bold text-[#403F3F] my-3 ">${phone.phone_name}</h3>
          <p class="secondary text-sm mb-3 mx-4">There are many variations of passages of available, but the majority have suffered</p>
          <h4 class="text-base font-bold text-[#403F3F] ">$999</h4>
@@ -27,12 +34,16 @@ const diaplayPhones = phones => {
 
 
 
-    </div>
-        `;
-        newDiv.appendChild(phoneCard);
+           </div>
+         `;
 
-    });
-    handlSpinner(false);
+            newDiv.appendChild(phoneCard);
+
+        });
+        dataID.classList.add('hidden')   ;     
+
+        handlSpinner(false);
+    }
 
 }
 
@@ -43,7 +54,7 @@ const handlePhone = () => {
 
 
 
-  
+
 
     const searchId = document.getElementById('searchValue');
 
@@ -60,8 +71,8 @@ const handlePhone = () => {
 
 const handleDetails = async (PD) => {
 
-  
-  
+
+
 
 
 
@@ -136,19 +147,19 @@ const handleDetails = async (PD) => {
 }
 
 
-const handlSpinner= (isLoading)=>{
-   
-    const spinnerId= document.getElementById('spin');
+const handlSpinner = (isLoading) => {
+
+    const spinnerId = document.getElementById('spin');
 
 
-     if(isLoading === true){
+    if (isLoading === true) {
         spinnerId.classList.remove('hidden');
 
-     }
-     else{
+    }
+    else {
         spinnerId.classList.add('hidden');
 
-     }
+    }
 
 
 }
